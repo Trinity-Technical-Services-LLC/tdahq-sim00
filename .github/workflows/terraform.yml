@@ -68,7 +68,12 @@ jobs:
           set-safe-directory: true
           github-server-url: 'https://github.com'
 
+      - name: 'Copy TFVars file to Terraform Runner Folder'
+        run: |
+          copy "${{ GITHUB_WORKSPACE }}\tdahq-sim00\systems.tfvars" "${{ GITHUB_WORKSPACE }}\proxmox-terraform-framework\systems.tfvars" 
+  
       - name: Terraform Init
+        working-directory: "${{ GITHUB_WORKSPACE }}\\proxmox-terraform-framework"
         run: |
           terraform init                                                                `
             -backend-config="bucket=${{ secrets.AWS_S3_BUCKET }}"                       `
@@ -77,11 +82,14 @@ jobs:
             -backend-config="region=${{ secrets.AWS_REGION }}"
 
       - name: Terraform Validate
+        working-directory: "${{ GITHUB_WORKSPACE }}\\proxmox-terraform-framework"
         run: terraform validate
 
       - name: Terraform Plan
+        working-directory: "${{ GITHUB_WORKSPACE }}\\proxmox-terraform-framework"
         run: terraform plan -out=tfplan
 
       - name: Terraform Apply
+        working-directory: "${{ GITHUB_WORKSPACE }}\\proxmox-terraform-framework"
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: terraform apply -auto-approve tfplan
