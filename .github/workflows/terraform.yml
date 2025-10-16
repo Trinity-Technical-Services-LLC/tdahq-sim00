@@ -54,9 +54,7 @@ jobs:
 
       - name: 'Copy TFVars file to Terraform Runner Folder'
         run: |
-          copy "${{ github.workspace }}\tdahq-sim00\systems.tfvar" "${{ github.workspace }}\proxmox-terraform-framework\terraform.tfvars" 
-          dir ${{ github.workspace }}\proxmox-terraform-framework
-          dir ${{ github.workspace }}\tdahq-sim00
+          copy "${{ github.workspace }}\tdahq-sim00\terraform.tfvars" "${{ github.workspace }}\proxmox-terraform-framework\terraform.tfvars" 
 
       - name: Terraform Init
         working-directory: "${{ github.workspace }}\\proxmox-terraform-framework"
