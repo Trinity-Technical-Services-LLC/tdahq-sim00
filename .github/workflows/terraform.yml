@@ -43,30 +43,14 @@ jobs:
         with:
           repository: "${{ github.repository }}"
           ref: 'main'
-          token: "${{ github.token }}"
           path: 'tdahq-sim00'
-          clean: true
-          fetch-depth: '1'
-          show-progress: true
-          lfs: false
-          submodules: false
-          set-safe-directory: true
-          github-server-url: 'https://github.com'
 
       - name: "Checkout The 'Proxmox Terraform Framework' Repository"
         uses: 'actions/checkout@v5'
         with:
           repository: 'Trinity-Technical-Services-LLC/proxmox-terraform-framework'
           ref: 'main'
-          token: "${{ github.token }}"
           path: 'proxmox-terraform-framework'
-          clean: true
-          fetch-depth: '1'
-          show-progress: true
-          lfs: false
-          submodules: false
-          set-safe-directory: true
-          github-server-url: 'https://github.com'
 
       - name: 'Copy TFVars file to Terraform Runner Folder'
         run: |
