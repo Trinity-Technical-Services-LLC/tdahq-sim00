@@ -27,8 +27,7 @@ jobs:
       TF_VAR_proxmox_hostname:         "${{ secrets.PROXMOX_HOSTNAME }}"
       TF_VAR_proxmox_api_token_id:     "${{ secrets.PROXMOX_TOKEN_ID }}"
       TF_VAR_proxmox_api_token_secret: "${{ secrets.PROXMOX_TOKEN_SECRET }}"
-      TF_VAR_proxmox_skip_tls_verify:  "${{ secrets.PROXMOX_SKIP_TLS_VERIFY }}"
-      TF_VAR_proxmox_node:             "${{ secrets.PROXMOX_NODE }}"
+      TF_VAR_proxmox_skip_tls_verify:  "true"
 
     steps:
       - name: 'Initalize Temporary AWS Credentials (via OIDC)'
