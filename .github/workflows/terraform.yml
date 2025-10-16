@@ -44,7 +44,7 @@ jobs:
           repository: "${{ github.repository }}"
           ref: 'main'
           token: "${{ github.token }}"
-          path: 'tdahq-sim00'
+          # path: 'tdahq-sim00'
           clean: true
           fetch-depth: '1'
           show-progress: true
@@ -59,7 +59,7 @@ jobs:
           repository: 'Trinity-Technical-Services-LLC/proxmox-terraform-framework'
           ref: 'main'
           token: "${{ github.token }}"
-          path: 'proxmox-terraform-framework'
+          # path: 'proxmox-terraform-framework'
           clean: true
           fetch-depth: '1'
           show-progress: true
