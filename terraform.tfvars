@@ -3,7 +3,7 @@ all_systems = [
     /* Required Parameters */
     name             = ""
     operating_system = "rocky_linux_9_x64"
-    vm_id            = ""
+    vm_id            = 999
     node_name        = "tcnhq-prxmx01"
 
     /* Optional Parameters */
