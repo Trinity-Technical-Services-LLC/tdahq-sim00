@@ -2,9 +2,10 @@ all_systems = [
   {
     /* Required Parameters */
     name             = ""
+    node_name        = "tcnhq-prxmx01"
+    pool_id          = "svc-herowars-core"
     template         = "rocky_linux_9_x64"
     vm_id            = 999
-    node_name        = "tcnhq-prxmx01"
 
     /* Optional Parameters */
     acpi  = true
