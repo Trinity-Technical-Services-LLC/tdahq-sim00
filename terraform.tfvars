@@ -87,10 +87,10 @@ all_systems = [
         mac_address  = ""
         model        = "virtio"
         mtu          = 1480
-        # queues      = null
-        # rate_limit  = null
-        # vlan_id     = 112
-        # trunks      = []
+      # queues       = null
+      # rate_limit   = null
+        vlan_id      = 112
+      # trunks       = []
       }
     ]
 
