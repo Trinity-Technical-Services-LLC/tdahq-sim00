@@ -25,8 +25,8 @@ jobs:
 
       # Proxmox Variables
       TF_VAR_proxmox_hostname:         "${{ secrets.PROXMOX_HOSTNAME }}"
-      TF_VAR_proxmox_api_token_id:     "${{ secrets.PROXMOX_TOKEN_ID }}"
-      TF_VAR_proxmox_api_token_secret: "${{ secrets.PROXMOX_TOKEN_SECRET }}"
+      TF_VAR_proxmox_api_token_id:     "${{ secrets.PROXMOX_TERRAFORM_FRAMEWORK_TOKEN_ID }}"
+      TF_VAR_proxmox_api_token_secret: "${{ secrets.PROXMOX_TERRAFORM_FRAMEWORK_SECRET }}"
       TF_VAR_proxmox_skip_tls_verify:  "true"
 
     steps:
