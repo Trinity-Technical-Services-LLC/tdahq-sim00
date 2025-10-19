@@ -60,8 +60,6 @@ all_systems = [
       dedicated      = 16384
       floating       = 0
       shared         = 0
-      hugepages      = "1024"  # NOTE: adjust if your schema expects "disable"/"2MB"/"1GB"
-      keep_hugepages = false
     }
 
     numa = {
