@@ -16,14 +16,7 @@ all_systems = [
       type    = "virtio"
     }
 
-    amd_sev = {
-      type           = "snp"
-      allow_smt      = true
-      kernel_hashes  = true
-      no_debug       = false
-      no_key_sharing = false
-    }
-
+    # amd_sev        = {} # Not Compatible with 'Privilege Separation' tokens.
     # audio_device   = {}   # Not needed for SIM servers
     # bios           = null # Value provided from VM template
     # boot_order     = []
